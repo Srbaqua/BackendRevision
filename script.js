@@ -1,62 +1,35 @@
-var arr = ['.',"..","...",1,2,3,7,5,3,"....",9,12," Saurabh"];
-
-
-// //for each
-// console.log("For each function");
-// arr.forEach(function(val){
-//     console.log("Hi"+ val);
+// ```basic we study-
+//         writefile
+//         readfile
+//         appendfile
+//         deletefile
+//         copyfile
+//         renamefile
+//         unlinkfile    
+// ```
+const fs =  require('fs');
+// fs.writeFile('hey.txt',"Hello checking writeFile",function(err){
+//     if(err){console.log(err)}
+//     else{
+//         console.log("File written successfully");
+//     }  
 // })
-
-// //map
-// var newarr = arr.map(function(val){
-//     return "Hi"+val;
+// fs.appendFile("hey.txt","\n lets add something more to check append file functionality",function(err){
+//     if(err){
+//         console.log(err);
+//     }else{
+//         console.log("Append successfully");
+//     }
 // })
-
-// console.log("map function "+newarr);
-
-// //filter
-// var filArr = arr.filter(function(val){
-//     if(val>3)return true;
-//     else return false;
+// fs.rename("hey.txt","changeNamed.txt",function(err){
+//     if(err)console.log(err);
+//     else{
+//         console.log("Renamed Successfully");
+//     }
 // })
-// console.log("Filter function "+filArr);
-
-
-// //find ->give the first element which satisfy the condition
-
-// var find =  arr.find(function(val){
-//     if(val>3)return true;
-// })
-// console.log("Find function "+find);
- 
-
-//Objects
-var obj =  {
-    name:"Saurabh",
-    age:25,
-    address:"x",
-    something:1,
-};
-//to access the object
- obj.name;
- obj["name"];
-//  Object.freeze(obj);// freeze the object
- obj.name = "Saurabh Kumar";
-
-
-function x(){
-    console.log("1");
-}
-async function y(){
-     console.log("2");
-}
-
-function z(){
-    console.log("3");
-}
-function a(){
-    x();
-    y();
-    z();
-}
-a();
+fs.readFile("changeNamed.txt","utf8",function(err,data){
+    if(err)console.log(err);
+    else{
+        console.log("file read \n",data);
+    }
+})

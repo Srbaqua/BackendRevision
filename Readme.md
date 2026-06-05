@@ -25,5 +25,6 @@ We will create Simple application authored in Node.js and MongoDB.
    
    **
    - Now we removed the index.html file as from now on we will be using Node.js to create the backend.
+   
 
 
