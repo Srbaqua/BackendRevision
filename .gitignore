@@ -1,0 +1,5 @@
+/write all the files which you want to ignore in this folder/
+# Example:
+node_modules/
+dist/
+.vscode/

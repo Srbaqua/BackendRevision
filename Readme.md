@@ -25,6 +25,16 @@ We will create Simple application authored in Node.js and MongoDB.
    
    **
    - Now we removed the index.html file as from now on we will be using Node.js to create the backend.
-   
+   - We initialized the project using npm init.
+   - We learned how to create a server using express.
+   - We learned how to use middlewares.
+   - We learned how to use sessions and cookies.
+   - We learned how to use form handling.
+   - We created a file named **test.js** in the Backend folder to revise and learn the basics of Node.js.
+   - Created a folder named **LearnWithPractice** in the Backend folder to learn concepts while implementing the project.
+   - We are learning how to use dynamic routing and how to get data coming from frontend.
+   - We are learning how to use static routing.
+
+
 
 
