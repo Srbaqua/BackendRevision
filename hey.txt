@@ -1,2 +1,0 @@
-Hello checking writeFile
- lets add something more to check append file functionality
