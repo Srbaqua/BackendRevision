@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= filename %></title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-zinc-950 text-white">
+
+    <div class="min-h-screen flex flex-col items-center px-6 py-10">
+
+
+        <a href="/"
+           class="text-blue-400 hover:text-blue-300 transition-colors mb-12">
+            ← Back to Home
+        </a>
+
+
+        <h1 class="text-5xl font-bold tracking-tight text-center mb-8">
+            <%= filename.split('.txt')[0] %>
+        </h1>
+
+        <!-- Content Card -->
+        <div class="w-full max-w-4xl bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl p-8">
+            <p class="text-zinc-200 text-lg leading-relaxed break-words whitespace-pre-wrap">
+                <%= filedata %>
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
