@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel = "stylesheet" href  = "/stylesheet/styles.css"
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/stylesheet/styles.css" </head>
+
 <body>
+    <div class="main w-full min-h-screen bg-zinc-900">
+        <div class="form p-10">
+            <form action="/create" method="post">
+                <input class="block px-5 w-full rounded-md outline-none text-white py-5 bg-zinc-500" type="text"
+                    placeholder="Title goes here" name="title">
+                <textarea class="block mt-2 w-full rounded-md outline-none text-white px-5 py-5 resize-none bg-zinc-500"
+                    placeholder="Write your taskhere" name="content"></textarea>
+                <input class="mt-2 bg-orange-100 px-5 py-2 rounded-lg" type="submit" value="Create Task">
+            </form>
+        </div>
+        <!-- resize-none is used to  -->
+
+
+        <div class="tasks p-10 flex gap-3 flex-wrap">
+            <% if(files.length>0){ %>
+                <% files.forEach(function(val,index){ %>
+                    <div class="task w-72 px-3 py-4 rounded-md bg-zinc-800 text-white">
+                        <h1 class="text-3xl tracking-tighter font-bold">
+                            <%=val.split('.')[0]%>
+                        </h1>
+                        <div class="flex w-full justify-between items-center bg-red-300">
+                            <% const link=val.split('.')[0];%>
+                                <a class="text-blue-500 inline-block mt-3" href="/files/<%=link%>">Read More</a>
+                                <!-- <a class="text-zinc-500" href="/files/<%=val%>">Edit</a> -->
+
+                        </div>
+
+
+                    </div>
+
+                    <% }) %>
+                        <% }else{ %>
+                            <div class="text-zinc-300">
+                                <h3><b>No tasks yet</b></h3>
+                            </div>
+                            <%} %>
+
+        </div>
+    </div>
+
     <script src="/javascripts/scripts.js"></script>
 </body>
+
 </html>
