@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="/stylesheet/styles.css">
+</head>
+
+<body>
+    <div class="main w-full min-h-screen bg-zinc-900">
+        <div class="form p-10">
+            <form action="/edit" method="post">
+                <div class="flex flex-col gap-2">
+                    <input type=text value="<%= filename %>" readonly name="oldname" placeholder="<%=filename%>" class="
+                    block px-5 w-1/4 rounded-md text-white py-3 bg-zinc-700
+                    ">
+                    <input class="block px-5 w-1/4 rounded-md outline-none text-white py-5 bg-zinc-500" type="text"
+                        placeholder="Write new name" name="newname">
+                    <input class="mt-2 w-1/6 bg-orange-100 px-5 py-2 rounded-lg" type="submit" value="EditName">
+                </div>
+            </form>
+        </div>
+
+
+        <script src="./javascripts/scripts.js"></script>
+</body>
+
+</html>

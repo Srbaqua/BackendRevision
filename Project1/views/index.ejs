@@ -19,7 +19,7 @@
                 <input class="mt-2 bg-orange-100 px-5 py-2 rounded-lg" type="submit" value="Create Task">
             </form>
         </div>
-        <!-- resize-none is used to  -->
+
 
 
         <div class="tasks p-10 flex gap-3 flex-wrap">
@@ -29,10 +29,10 @@
                         <h1 class="text-3xl tracking-tighter font-bold">
                             <%=val.split('.')[0]%>
                         </h1>
-                        <div class="flex w-full justify-between items-center bg-red-300">
+                        <div class="flex w-full justify-between items-baseline">
                             <% const link=val.split('.')[0];%>
                                 <a class="text-blue-500 inline-block mt-3" href="/files/<%=link%>">Read More</a>
-                                <!-- <a class="text-zinc-500" href="/files/<%=val%>">Edit</a> -->
+                                <a class="text-zinc-500" href="/edit/<%= link %>">Edit</a>
 
                         </div>
 
